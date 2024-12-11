@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulação de Cadastro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <button class="menu-toggle" id="menuToggle">☰</button>
+
+  <div class="container">
+
+    <nav class="menu-lateral" id="menuLateral">
+      <h2>Navegação</h2>
+      <ul>
+        <li><a href="#cadastro" id="linkCadastrar">Cadastrar Usuário</a></li>
+        <li><a href="#lista" id="linkLista">Lista de Usuários</a></li>
+      </ul>
+    </nav>
+
+    <main class="conteudo-principal">
+    
+      <section id="cadastroArea" class="area active">
+        <h1>Cadastro de Usuário</h1>
+        <div class="caixa">
+          <h2>Preencha seus dados</h2>
+          <form id="formCadastro">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" placeholder="Seu nome completo" required>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" placeholder="Seu e-mail" required>
+            <label for="senha">Número de telefone:</label>
+            <input type="phone-number" id="numero" placeholder="Seu número de telefone" required>
+            <button type="submit">Cadastrar</button>
+          </form>
+        </div>
+      </section>
+
+      <section id="listaArea" class="area">
+        <h1>Usuários Cadastrados</h1>
+        <div class="caixa resultados">
+          <h2>Lista de Cadastros <span id="contadorUsuarios">(0)</span></h2>
+          <table id="tabelaUsuarios">
+            <thead>
+              <tr>
+                <th>Nome</th>
+                <th>E-mail</th>
+                <th>Número de telefone</th>
+                <th>Ação</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
